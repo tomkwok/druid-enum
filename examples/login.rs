@@ -26,7 +26,7 @@ struct MainState {
 }
 
 fn main() -> Result<(), PlatformError> {
-    let window = WindowDesc::new(ui).title("Druid Enums");
+    let window = WindowDesc::new(ui()).title("Druid Enums");
     let state = AppState::Login(LoginState::default());
     AppLauncher::with_window(window)
         .use_simple_logger()

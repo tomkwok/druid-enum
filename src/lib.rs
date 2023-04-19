@@ -144,7 +144,7 @@ pub fn derive(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
             #enum_name::#variant_name #data_pattern => match &mut self.#builder_name {
                 Some(widget) => {
                     let size = widget.layout(ctx, bc, #data_values, env);
-                    widget.set_layout_rect(ctx, #data_values, env, size.to_rect());
+                    widget.set_origin(ctx, size.to_rect().origin());
                     size
                 },
                 None => bc.min(),
