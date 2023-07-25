@@ -14,11 +14,11 @@ license = "MIT"
 proc-macro = true
 
 [dependencies]
-heck = "0.3.1"
+heck = "0.4.1"
 log = "0.4.11"
 proc-macro2 = "1.0.19"
 quote = "1.0.7"
-syn = "1.0.35"
+syn = "2.0"
 
 [dev-dependencies]
 druid = "0.8.0"

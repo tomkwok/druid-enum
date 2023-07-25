@@ -1,4 +1,4 @@
-use heck::SnakeCase;
+use heck::ToSnakeCase;
 use proc_macro2::Span;
 use syn::{
     parse::{Parse, ParseStream},
@@ -176,7 +176,7 @@ impl ProcessAttrs {
                 Some(a) => a,
                 None => return Ok(()),
             };
-            if !matches_path(&attr.path) {
+            if !matches_path(&attr.path()) {
                 continue;
             }
             let match_attrs: Punctuated<_, Token![,]> =
